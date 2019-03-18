@@ -15,4 +15,13 @@ export class ModelService {
     return this.http.get('/server/api/v1/models');
   }
 
+  getModel(id: number) {
+    return this.http.get('/server/api/v1/models' + id);
+  }
+
+  createModelRegistration(model) {
+    let body = JSON.stringify(model);
+    return this.http.post('/server/api/v1/models', body, httpOptions);
+  }
+
 }
