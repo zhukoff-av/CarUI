@@ -8,7 +8,8 @@
     </tr>
     <tr *ngFor="let model of models">
       <td>
-        {{model.name}}
+        <!-- {{model.name}} -->
+        <a [routerLink]="['/admin/view', model.id]">{{model.name}}</a>
       </td>
       <td>
         {{model.email}}
