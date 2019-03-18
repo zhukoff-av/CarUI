@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { BikeService } from './services/bike.service';
+import { ModelService } from './services/bike.service';
 import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
@@ -19,7 +19,7 @@ import { AdminComponent } from './components/admin/admin.component';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [BikeService],
+  providers: [ModelService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

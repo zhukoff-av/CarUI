@@ -7,11 +7,11 @@ const httpOptions = {
 };
 
 @Injectable()
-export class BikeService {
+export class ModelService {
 
   constructor( private http: HttpClient ) { }
 
-  getBikes() {
+  getModels() {
     return this.http.get('/server/api/v1/models');
   }
 

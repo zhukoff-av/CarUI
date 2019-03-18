@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BikeService } from '../../services/bike.service';
+import { ModelService } from '../../services/bike.service';
 
 @Component({
   selector: 'app-admin',
@@ -7,19 +7,19 @@ import { BikeService } from '../../services/bike.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-  public bikes;
+  public models;
 
-  constructor(private bikeService: BikeService) { }
+  constructor(private modelService: ModelService) { }
 
   ngOnInit() {
-    this.getBikes();
+    this.getModels();
   }
 
-  getBikes() {
-    this.bikeService.getBikes().subscribe(
-      data => { this.bikes = data},
+  getModels() {
+    this.modelService.getModels().subscribe(
+      data => { this.models = data},
       err => console.error(err),
-      () => console.log('bikes loaded')
+      () => console.log('models loaded')
     );
   }
 
