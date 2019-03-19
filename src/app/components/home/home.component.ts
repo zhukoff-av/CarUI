@@ -11,9 +11,9 @@ import { Observable } from 'rxjs';
 export class HomeComponent implements OnInit {
 
   models: string[] = [
-    'Model 1',
-    'Model 2',
-    'Model 3',
+    'Mercedes',
+    'BMW',
+    'AUDI',
   ];
 
   modelForm: FormGroup;

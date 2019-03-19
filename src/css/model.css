@@ -13,7 +13,7 @@ body {
   font-family: 'Courier New', sans-serif;
   font-weight: normal;
   font-size: 1.5em;
-  background: linear-gradient(150deg, #D5E3F1 15%, #FFFBD9 70%, #FFDFCB 94%);
+  background: linear-gradient(to bottom right, #669999 0%, #ffffff 100%);
 }
 
 h1 {
