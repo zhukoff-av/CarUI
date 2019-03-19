@@ -17,7 +17,7 @@ export class AdminComponent implements OnInit {
 
   getModels() {
     this.modelService.getModels().subscribe(
-      data => { this.models = data},
+      data => { this.models = data; },
       err => console.error(err),
       () => console.log('models loaded')
     );

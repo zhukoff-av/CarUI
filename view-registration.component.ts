@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModelService } from '../../services/bike.service';
+import { BikeService } from '../../services/bike.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,21 +9,21 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ViewRegistrationComponent implements OnInit {
 
-  public modelR;
+  public bikeReg;
 
-  constructor(private modelService: ModelService, private route: ActivatedRoute) { }
+  constructor(private bikeService: BikeService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.getModelReg(this.route.snapshot.params.id);
+    this.getBikeReg(this.route.snapshot.params.id);
   }
 
-  getModelReg(id:number) {
-    this.modelService.getModel(id).subscribe(
+  getBikeReg(id:number) {
+    this.bikeService.getBike(id).subscribe(
       data => {
-        this.modelR = data;
+        this.bikeReg = data;
       },
       err => console.error(err),
-      () => console.log('models loaded')
+      () => console.log('bikes loaded')
     );
   }
 

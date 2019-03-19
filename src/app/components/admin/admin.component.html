@@ -5,6 +5,7 @@
       <th>Email</th>
       <th>Model</th>
       <th class="text-right">Purchase Price</th>
+      <th class="text-right">Purchase Data</th>
     </tr>
     <tr *ngFor="let model of models">
       <td>
@@ -19,6 +20,9 @@
       </td>
       <td class="text-right">
         {{model.purchase_price}}
+      </td>
+      <td class="text-right">
+        {{model.purchase_date}}
       </td>
     </tr>
   </table>
